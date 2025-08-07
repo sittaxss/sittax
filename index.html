@@ -18,17 +18,18 @@
             margin: 0;
             min-height: 100vh;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
         }
         .main-card {
             background: var(--sittax-light);
             border-radius: 18px;
             box-shadow: 0 8px 24px rgba(44, 62, 80, 0.10);
-            padding: 0 0 32px 0;
+            padding: 0 0 40px 0;
             min-width: 340px;
-            max-width: 700px;
+            max-width: 900px;
             width: 100%;
+            margin: 32px 0;
         }
         .header {
             background: var(--sittax-orange);
@@ -59,9 +60,9 @@
         .tools-bar, .social-bar {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             gap: 10px;
-            margin: 28px 0 24px 0;
+            margin: 32px 0 18px 40px;
         }
         .tools-bar .tool-icon,
         .social-bar .social-icon {
@@ -73,15 +74,15 @@
         }
         .tools-bar span, .social-bar span {
             color: var(--sittax-dark);
-            font-size: 1.15rem;
+            font-size: 1.18rem;
             font-weight: 700;
             letter-spacing: 0.5px;
         }
         .links-grid, .social-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 18px 14px;
-            margin: 0 28px;
+            margin: 0 40px;
         }
         .link-item a, .social-item a {
             display: flex;
@@ -127,14 +128,23 @@
             justify-content: center;
             padding: 2px;
         }
-        @media (max-width: 700px) {
+        @media (max-width: 1100px) {
             .main-card {
-                max-width: 98vw;
+                max-width: 99vw;
             }
+            .links-grid, .social-grid {
+                grid-template-columns: repeat(3, 1fr);
+                margin: 0 12px;
+            }
+        }
+        @media (max-width: 800px) {
             .links-grid, .social-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 14px 8px;
                 margin: 0 8px;
+            }
+            .tools-bar, .social-bar {
+                margin-left: 12px;
             }
         }
         @media (max-width: 500px) {
@@ -147,6 +157,7 @@
             .links-grid, .social-grid {
                 grid-template-columns: 1fr;
                 gap: 10px 0;
+                margin: 0 4px;
             }
             .link-item a, .social-item a {
                 font-size: 0.98em;
@@ -180,9 +191,80 @@
             <span>Ferramentas</span>
         </div>
         <div class="links-grid">
-            <!-- ... (todos os links de ferramentas, igual já estava) ... -->
-            <!-- (copie aqui os links das ferramentas do seu painel, igual já estava antes) -->
-            <!-- ... -->
+            <div class="link-item">
+                <a href="https://app.pipe.run/v2/login?referer=%2Fpipeline" target="_blank">
+                    <img src="https://app.pipe.run/favicon.ico" alt="PipeRun" onerror="this.onerror=null;this.src='https://img.icons8.com/ios-filled/50/ff7a1a/link.png';">
+                    PipeRun
+                </a>
+            </div>
+            <div class="link-item">
+                <a href="http://outlook.live.com/" target="_blank">
+                    <img src="https://outlook.live.com/favicon.ico" alt="E-mail" onerror="this.onerror=null;this.src='https://img.icons8.com/color/48/ff7a1a/ms-outlook.png';">
+                    E-mail
+                </a>
+            </div>
+            <div class="link-item">
+                <a href="https://discord.com/" target="_blank">
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/discord-3-569463.png" alt="Discord">
+                    Discord
+                </a>
+            </div>
+            <div class="link-item">
+                <a href="https://app.api4com.com/login?redirect=%2Fusers%2Flist" target="_blank">
+                    <img src="https://img.icons8.com/ios-filled/50/ff7a1a/api-settings.png" alt="Api4Com" style="width:36px;height:36px;object-fit:contain;background:#fff;border-radius:6px;border:1px solid #e0e3e8;padding:2px;">
+                    Api4COm
+                </a>
+            </div>
+            <div class="link-item">
+                <a href="https://metabase.sittax.com.br/auth/login?redirect=%2Fadmin%2Fpeople" target="_blank">
+                    <img src="https://metabase.sittax.com.br/app/assets/img/favicon.ico" alt="MetaBase" onerror="this.onerror=null;this.src='https://img.icons8.com/ios-filled/50/ff7a1a/link.png';">
+                    MetaBase
+                </a>
+            </div>
+            <div class="link-item">
+                <a href="https://sittax.movidesk.com/Account/Login" target="_blank">
+                    <img src="https://sittax.movidesk.com/favicon.ico" alt="Movie Desk" onerror="this.onerror=null;this.src='https://img.icons8.com/ios-filled/50/ff7a1a/link.png';">
+                    Movie Desk
+                </a>
+            </div>
+            <div class="link-item">
+                <a href="https://login.convenia.com.br/" target="_blank">
+                    <span class="logo-convenia">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Convenia_logo.svg" alt="Convenia" style="width:28px;height:28px;">
+                    </span>
+                    Convenia
+                </a>
+            </div>
+            <div class="link-item">
+                <a href="https://tiquetaque.app/painel" target="_blank">
+                    <img src="https://tiquetaque.app/favicon.ico" alt="TiqueTaque" onerror="this.onerror=null;this.src='https://img.icons8.com/ios-filled/50/ff7a1a/link.png';">
+                    TiqueTaque
+                </a>
+            </div>
+            <div class="link-item">
+                <a href="https://sittax.conexa.app/index.php?r=site/login&returnUrl=%2Findex.php%3Fr%3Dsite%2Findex" target="_blank">
+                    <img src="https://conexa.app/favicon.ico" alt="Conexa" onerror="this.onerror=null;this.src='https://img.icons8.com/ios-filled/50/ff7a1a/link.png';">
+                    Conexa
+                </a>
+            </div>
+            <div class="link-item">
+                <a href="https://www.inhire.com.br/carreiras/sittax/" target="_blank">
+                    <img src="https://www.inhire.com.br/favicon.ico" alt="Carreiras" style="width:36px;height:36px;object-fit:contain;background:#fff;border-radius:6px;border:1px solid #e0e3e8;padding:2px;">
+                    Página de Carreiras
+                </a>
+            </div>
+            <div class="link-item">
+                <a href="https://sittax.inhire.app/" target="_blank">
+                    <img src="https://www.inhire.com.br/favicon.ico" alt="InHire" style="width:36px;height:36px;object-fit:contain;background:#fff;border-radius:6px;border:1px solid #e0e3e8;padding:2px;">
+                    InHire
+                </a>
+            </div>
+            <div class="link-item">
+                <a href="https://docs.google.com/forms/d/1_HRHefigZH1MpysAPrOYtcYUACPVF6xqo5-epGJgapw/viewform?edit_requested=true" target="_blank">
+                    <img src="https://ssl.gstatic.com/docs/forms/forms_logo_2022q4_48dp.png" alt="Requisição Marketing" style="width:36px;height:36px;object-fit:contain;background:#fff;border-radius:6px;border:1px solid #e0e3e8;padding:2px;">
+                    Requisição Marketing
+                </a>
+            </div>
             <div class="link-item">
                 <a href="https://wellhub.com/pt-br/" target="_blank">
                     <img src="https://wellhub.com/favicon.ico" alt="Wellhub" style="width:36px;height:36px;object-fit:contain;background:#fff;border-radius:6px;border:1px solid #e0e3e8;padding:2px;">
