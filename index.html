@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SITTAX</title>
+    <title>SITTAX - Meus Links de Trabalho</title>
     <style>
         :root {
             --sittax-orange: #ff7a1a;
@@ -26,14 +26,27 @@
             box-shadow: 0 8px 24px rgba(44, 62, 80, 0.10);
             padding: 0 0 32px 0;
             min-width: 340px;
-            max-width: 500px;
+            max-width: 600px;
             width: 100%;
         }
         .header {
             background: var(--sittax-orange);
             border-radius: 18px 18px 0 0;
-            padding: 28px 0 18px 0;
+            padding: 24px 0 16px 0;
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+        }
+        .header img {
+            width: 38px;
+            height: 38px;
+            background: #fff;
+            border-radius: 50%;
+            padding: 4px;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.08);
         }
         .header h1 {
             color: var(--sittax-light);
@@ -88,6 +101,19 @@
             border: 1px solid #e0e3e8;
             padding: 2px;
         }
+        /* Logo Convenia SVG */
+        .logo-convenia {
+            background: #fff;
+            border-radius: 6px;
+            border: 1px solid #e0e3e8;
+            width: 36px;
+            height: 36px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2px;
+        }
         @media (max-width: 700px) {
             .main-card {
                 max-width: 98vw;
@@ -113,7 +139,7 @@
                 font-size: 0.98em;
                 padding: 12px 4px 8px 4px;
             }
-            .link-item img {
+            .link-item img, .logo-convenia {
                 width: 28px;
                 height: 28px;
             }
@@ -123,9 +149,10 @@
 <body>
     <div class="main-card">
         <div class="header">
+            <img src="https://sittax.com.br/favicon.ico" alt="Logo Sittax">
             <h1>SITTAX</h1>
         </div>
-        <div class="subtitle">Ferramentas</div>
+        <div class="subtitle">Meus Links de Trabalho</div>
         <div class="links-grid">
             <div class="link-item">
                 <a href="https://app.pipe.run/v2/login?referer=%2Fpipeline" target="_blank">
@@ -165,7 +192,9 @@
             </div>
             <div class="link-item">
                 <a href="https://login.convenia.com.br/" target="_blank">
-                    <img src="https://convenia.com.br/favicon.ico" alt="Convenia" onerror="this.onerror=null;this.src='https://img.icons8.com/ios-filled/50/ff7a1a/conference-call.png';">
+                    <span class="logo-convenia">
+                        <img src="https://convenia.com.br/wp-content/themes/convenia-2021/assets/img/logo-convenia.svg" alt="Convenia" style="width:28px;height:28px;">
+                    </span>
                     Convenia
                 </a>
             </div>
@@ -173,6 +202,12 @@
                 <a href="https://tiquetaque.app/painel" target="_blank">
                     <img src="https://tiquetaque.app/favicon.ico" alt="TiqueTaque" onerror="this.onerror=null;this.src='https://img.icons8.com/ios-filled/50/ff7a1a/link.png';">
                     TiqueTaque
+                </a>
+            </div>
+            <div class="link-item">
+                <a href="https://sittax.conexa.app/index.php?r=site/login&returnUrl=%2Findex.php%3Fr%3Dsite%2Findex" target="_blank">
+                    <img src="https://conexa.app/favicon.ico" alt="Conexa" onerror="this.onerror=null;this.src='https://img.icons8.com/ios-filled/50/ff7a1a/link.png';">
+                    Conexa
                 </a>
             </div>
         </div>
